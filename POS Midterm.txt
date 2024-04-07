@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anika Sweet Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #333;
+            color: pink;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .menu-item {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 30px;
+            width: 200px;
+            text-align: center;
+            margin: 20px; /* Equal spacing between menu items */
+        }
+
+        .menu-item img {
+            width: 100%; /* Adjust the width of the image to fit its container */
+            border-radius: 30px;
+        }
+
+        .order {
+            padding: 20px;
+        }
+
+        .total {
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: pink;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Anika Sweet Bakery</h1>
+        <p>Your one-stop shop for all things sweet!</p>
+    </header>
+
+    <section class="menu">
+        <h2>Menu</h2>
+        <table>
+            <tr>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/cupcake.jpg" alt="Cupcake">
+                        <div class="item-details">
+                            <h3>Cupcake</h3>
+                            <p>P20.00</p>
+                            <button onclick="addToOrder('Cupcake', 20.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/cinna.jpg" alt="Cinnamon roll">
+                        <div class="item-details">
+                            <h3>Cinnamon roll</h3>
+                            <p>P50.00</p>
+                            <button onclick="addToOrder('Cinnamon roll', 50.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/pancake.jpg" alt="Pancake">
+                        <div class="item-details">
+                            <h3>Pancake</h3>
+                            <p>P30.00</p>
+                            <button onclick="addToOrder('Pancake', 30.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/donut.jpg" alt="Donut">
+                        <div class="item-details">
+                            <h3>Donut</h3>
+                            <p>P20.00</p>
+                            <button onclick="addToOrder('Donut', 20.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/cookies.jpg" alt="Cookies">
+                        <div class="item-details">
+                            <h3>Cookies</h3>
+                            <p>P30.00</p>
+                            <button onclick="addToOrder('Cookies', 30.00)">Add to Order</button>
+                        </div>
+                </td>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/cake.jpg" alt="Cake">
+                        <div class="item-details">
+                            <h3>Cake</h3>
+                            <p>P250.00</p>
+                            <button onclick="addToOrder('Cake', 250.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/brownies.jpg" alt="Brownies">
+                        <div class="item-details">
+                            <h3>Brownies</h3>
+                            <p>P60.00</p>
+                            <button onclick="addToOrder('Brownies', 60.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/blueberry cheesecake.jpg" alt="BlueBerry Cheesecake">
+                        <div class="item-details">
+                            <h3>BlueBerry Cheesecake</h3>
+                            <p>P150.00</p>
+                            <button onclick="addToOrder('BlueBerry Cheesecake', 150.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/choco eclairs.jpg" alt="Chocolate Eclairs">
+                        <div class="item-details">
+                            <h3>Chocolate Eclairs</h3>
+                            <p>P100.00</p>
+                            <button onclick="addToOrder('Chocolate Eclairs', 100.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/caramel frap.jpg" alt="Caramel Frappuccino">
+                        <div class="item-details">
+                            <h3>Caramel Frappuccino</h3>
+                            <p>P250.00</p>
+                            <button onclick="addToOrder('Caramel Frappuccino', 250.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/creamy choco.jpg" alt="Creamy Chocolate Frappe">
+                        <div class="item-details">
+                            <h3>Creamy Chocolate Frappe</h3>
+                            <p>P250.00</p>
+                            <button onclick="addToOrder('Creamy Chocolate Frappe', 250.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="menu-item">
+                        <img src="img/strawberry milkshake.jpg" alt="Strawberry Milkshake">
+                        <div class="item-details">
+                            <h3>Strawberry Milkshake</h3>
+                            <p>P250.00</p>
+                            <button onclick="addToOrder('Strawberry Milkshake', 250.00)">Add to Order</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="order">
+        <h2>Order Summary</h2>
+        <div class="ordered-items">
+            <h3>Ordered Items</h3>
+            <ul id="ordered-items-list">
+                <!-- Ordered items will appear here -->
+            </ul>
+        </div>
+        <div class="total">
+            <h3>Total:</h3>
+            <p id="total-price">P0.00</p>
+        </div>
+        <button onclick="pay()">Pay</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anika Sweet Bakery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to add item to order
+        function addToOrder(itemName, price) {
+            var orderedItemsList = document.getElementById("ordered-items-list");
+            var total = document.getElementById("total-price");
+
+            // Create list item for the ordered item
+            var listItem = document.createElement("li");
+            listItem.textContent = itemName + " - P" + price.toFixed(2);
+            orderedItemsList.appendChild(listItem);
+
+            // Calculate total price
+            var totalPrice = parseFloat(total.textContent.substring(1)); // Remove P sign
+            totalPrice += price;
+            total.textContent = "P" + totalPrice.toFixed(2);
+        }
+
+        // Function to handle payment
+        function pay() {
+            alert("Payment processed successfully!");
+        }
+    </script>
+</body>
+</html>
